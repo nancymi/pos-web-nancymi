@@ -13,6 +13,18 @@ function loadItems() {
     return items;
 }
 
+function storePromotions(promotions) {
+    var promotionsJson = objectToJson(promotions);
+    storeToWindow("promotions", promotionsJson);
+}
+
+function loadPromotions() {
+    var promotionsJson = loadFromWindow("promotions");
+    var promotions = jsonToObject(promotionsJson);
+
+    return promotions;
+}
+
 function storeCart(cart) {
     var cartJson = objectToJson(cart);
     storeToWindow("cart", cartJson);

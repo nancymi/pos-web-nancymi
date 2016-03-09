@@ -39,7 +39,7 @@ function loadAllItems() {
     ];
 }
 
-function loadPromotions() {
+function loadAllPromotions() {
     return [
         {
             type: 'BUY_TWO_GET_ONE_FREE',
