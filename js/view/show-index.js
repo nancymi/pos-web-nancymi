@@ -9,16 +9,17 @@ $("#items").ready(function() {
     var items = loadItems();
     showItems(items);
 
-    $(".add-button").click(function() {
+    var addButtons = document.getElementsByClassName('add-button');
+    for (var i = 0; i < addButtons.length; i ++) {
+        var barcode = $(addButtons[i]).attr('data-barcode');
+        updateButtonStyle(addButtons[i], barcode);
+    }
 
+    $(".add-button").click(function() {
         var barcode = $(this).attr('data-barcode');
         updateCart(barcode);
         showCartSum(loadCart());
-        if (this.className.match(/(?:^|\s)button-rounded(?!\S)/)) {
-            this.className = 'add-button button button-glow button-border button-raised button-circle button-primary';
-        } else {
-            this.className = 'add-button button button-glow button-border button-rounded button-circle button-primary';
-        }
+        updateButtonStyle(this, barcode);
     });
 
     $("#cart-button").click(function() {
@@ -34,6 +35,15 @@ $("#cart-sum").ready(function() {
     var cart = loadCart();
     showCartSum(cart);
 });
+
+function updateButtonStyle(button, barcode) {
+    var cartJson = objectToJson(loadCart());
+    if (cartJson.indexOf(barcode) > -1) {
+        button.className = 'add-button button button-glow button-border button-raised button-circle button-primary';
+    } else {
+        button.className = 'add-button button button-glow button-border button-rounded button-circle button-primary';
+    }
+}
 
 function initData() {
     $.getJSON("../js/data/items.json", function(data) {
