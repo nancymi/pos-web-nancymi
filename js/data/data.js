@@ -43,6 +43,7 @@ function loadAllPromotions() {
     return [
         {
             type: 'BUY_TWO_GET_ONE_FREE',
+            describe: '买二赠一',
             barcodes: [
                 'ITEM000000',
                 'ITEM000001',

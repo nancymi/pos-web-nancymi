@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>购物清单</title>
+    <script src="../lib/jquery-2.2.1.min.js"></script>
+    <script src="../js/logic/jump.js"></script>
+    <script src="../lib/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+    <script src="../js/view/show-receipt.js"></script>
+    <script src="../js/logic/generate-receipt.js"></script>
+    <script src="../js/data/data-access.js"></script>
+
+    <link href="../css/receipt.css">
+    <link href="../lib/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../lib/bootstrap-3.3.5-dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="../lib/buttons.css">
+    <link rel="stylesheet" href="../lib/font-awesome-4.5.0/css/font-awesome.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container text-center">
+            购物清单
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div id="receipt" class="col-md-12" align="center">
+                <table id="receipt-items" class="table table-hover text-center" align="center"></table>
+                <div id="total-normal-price" class="col-md-2 col-md-offset-4"></div>
+                <div id="total-promo-price" class="col-md-2"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

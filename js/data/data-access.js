@@ -8,7 +8,7 @@ function storeItems(items) {
 
 function loadItems() {
     var itemsJson = loadFromWindow("items");
-    var items = jsonToObject(itemsJson);
+    var items = jsonToObject(itemsJson) || [];
 
     return items;
 }
@@ -20,7 +20,7 @@ function storePromotions(promotions) {
 
 function loadPromotions() {
     var promotionsJson = loadFromWindow("promotions");
-    var promotions = jsonToObject(promotionsJson);
+    var promotions = jsonToObject(promotionsJson) || [];
 
     return promotions;
 }
@@ -32,7 +32,7 @@ function storeCart(cart) {
 
 function loadCart() {
     var cartJson = loadFromWindow("cart");
-    var cart = jsonToObject(cartJson);
+    var cart = jsonToObject(cartJson) || [];
 
     return cart;
 }
