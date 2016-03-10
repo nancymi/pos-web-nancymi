@@ -25,6 +25,7 @@ describe('when call generateReceipt() then will generate receipt message', funct
     });
 
     it('generateReceipt(cart, items)', function() {
+        storePromotions(loadAllPromotions());
         var receipt = {
             cartItems: [
                 {

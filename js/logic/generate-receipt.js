@@ -43,7 +43,7 @@ function calculatePromoPrice(item, count, loadPromotions) {
         switch(promotion.type) {
             case 'BUY_TWO_GET_ONE_FREE': {
                 promotion.barcodes.forEach(function(barcode) {
-                    if (item.barcode === barcode) {
+                    if (item.barcode === barcode.barcode) {
                         promoPrice = promoBuyTwoGetOneFree(item, count);
                     }
                 });

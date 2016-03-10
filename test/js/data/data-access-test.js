@@ -88,7 +88,7 @@ describe('data access -- load, store and clear', function() {
     it('when call loadHistory() then return history', function() {
 
         storeHistory(timestamp, receipt);
-        expect(loadHistory()[0]).toEqual({timestemp: timestamp, receipt: receipt});
+        expect(loadHistory()[0]).toEqual({timestamp: timestamp, receipt: receipt});
     });
 
     it('when call clearHistory() then window.localStorage.history is gone', function() {

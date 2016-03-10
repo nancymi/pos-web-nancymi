@@ -31,7 +31,7 @@ function addEvent() {
 
     $("#checkout-button").click(function() {
         storeReceipt(receipt);
-        storeHistory(receipt);
+        storeHistory((new Date()).valueOf(), receipt);
         clearCart();
         jump(document, 'receipt.html');
     });

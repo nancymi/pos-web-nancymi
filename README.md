@@ -10,7 +10,6 @@
   * showCartSum(cart)
 * add-btn 点击事件：
   * updateCart(item-id)
-  * storeCart(cart)
   * showCartSum(cart)
 * cart-btn 点击事件：
   * jump(url)
@@ -21,17 +20,16 @@
 * cart 初始化： 
   * loadCart()
   * loadItems()
-  * generateCartInfo(cart, items)
+  * generateReceipt(cart, items)
   * showCart(receipt)
 * count-input 输入事件：
   * updateCart(item-id, count)
-  * storeCart(cart)
-  * generateCartInfo(cart, items)
+  * generateReceipt(cart, items)
   * showCart(receipt)
 * delete-btn 点击事件： 
   * updateCart(item-id)
   * storeCart(cart)
-  * generateCartInfo(cart, items)
+  * generateReceipt(cart, items)
   * showCart(receipt)
 * checkout-btn 点击事件：
   * storeReceipt(receipt)
@@ -60,6 +58,7 @@
 * showCartSum(cart): 30 min
 * showCart(receipt): 60 min
 * showReceipt(): 60 min 
+* showHistory(): 60 min
 
 ##Data 
 * storeItems(items): 20 min 
@@ -75,7 +74,9 @@
 
 ##Logic
 * jump(url): 5 min 
-* generateCartInfo(cart, items): 80 min
+* generateReceipt(cart, items): 80 min
+* updateCart(barcode): 30 min
+* updateCart(barcode, count): 30 min
 
 
-**Total -- 565 min (9.5 小时)**
+**Total -- 625 min (10.5 小时)**

@@ -44,10 +44,10 @@ function loadAllPromotions() {
         {
             type: 'BUY_TWO_GET_ONE_FREE',
             describe: '买二赠一',
-            barcodes: [
-                'ITEM000000',
-                'ITEM000001',
-                'ITEM000005'
+            barcodes: [{
+                barcode: 'ITEM000000'},
+                {barcode: 'ITEM000001'},
+                {barcode: 'ITEM000005'}
             ]
         }
     ];
